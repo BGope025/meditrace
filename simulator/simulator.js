@@ -45,8 +45,8 @@ class VirtualSensor {
 
     const configuredPrivateKey = process.env.SENSOR_PRIVATE_KEY || process.env.PRIVATE_KEY;
     // A configured key gives the sensor a stable identity registered in the backend.
-    // If absent, create a fresh device identity and print the address for enrollment.
-    const privateKey = configuredPrivateKey || Wallet.createRandom().privateKey;
+    // Defaults to the seeded sensor_001 key (0x70997970C51812dc3A010C7d01b50e0d17dc79C8).
+    const privateKey = configuredPrivateKey || '0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d';
     this.wallet = new Wallet(privateKey);
 
     this.temperature = TARGET_TEMPERATURE;
