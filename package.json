@@ -15,7 +15,8 @@
     "test-all": "npm test --workspaces",
     "dev": "concurrently -k \"npm:dev:*\"",
     "dev:backend": "npm run dev --workspace=backend",
-    "dev:client": "npm run dev --workspace=client"
+    "dev:client": "npm run dev --workspace=client",
+    "simulate": "npm run start --workspace=simulator"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

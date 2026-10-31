@@ -107,28 +107,38 @@ async function readNextBatchId() {
 
 async function deriveBoxNames(methodName, sender, args) {
   const batchId = Number(args[0] || 0);
-  const names = [roleBox(sender)];
+  const names = [];
+
   if (methodName === 'createBatch') {
     const nextId = await readNextBatchId();
+    // 8 box references max per transaction
     ['bn', 'bm', 'bc', 'bs', 'bt', 'bu', 'cc', 'xc'].forEach((prefix) => names.push(uint64Box(prefix, nextId)));
   } else if (methodName === 'transferBatch') {
+    names.push(roleBox(sender));
     const index = await readBoxUint(uint64Box('cc', batchId));
-    ['bc', 'bs', 'bu', 'cc', 'cf', 'ct', 'ca', 'cs'].forEach((prefix) => names.push(uint64Box(prefix, prefix.length === 2 && ['cf', 'ct', 'ca', 'cs'].includes(prefix) ? batchId * 1_000_000 + index : batchId)));
+    ['bc', 'bs', 'bu', 'cc', 'cf', 'ct', 'ca'].forEach((prefix) => names.push(uint64Box(prefix, ['cf', 'ct', 'ca'].includes(prefix) ? batchId * 1_000_000 + index : batchId)));
   } else if (methodName === 'recordTemperature') {
+    names.push(roleBox(sender));
     const index = await readBoxUint(uint64Box('xc', batchId));
-    ['bs', 'bu', 'xc', 'xt', 'xo', 'xr', 'xs', 'xe'].forEach((prefix) => names.push(uint64Box(prefix, ['xt', 'xo', 'xr', 'xs', 'xe'].includes(prefix) ? batchId * 1_000_000 + index : batchId)));
+    ['bs', 'bu', 'xc', 'xt', 'xo', 'xr', 'xs'].forEach((prefix) => names.push(uint64Box(prefix, ['xt', 'xo', 'xr', 'xs'].includes(prefix) ? batchId * 1_000_000 + index : batchId)));
   } else if (methodName === 'flagBreach') {
+    names.push(roleBox(sender));
     ['bs', 'bu'].forEach((prefix) => names.push(uint64Box(prefix, batchId)));
   } else if (methodName === 'confirmDelivery') {
+    names.push(roleBox(sender));
     ['bc', 'bs', 'bu'].forEach((prefix) => names.push(uint64Box(prefix, batchId)));
   } else if (methodName === 'grantRole' || methodName === 'revokeRole' || methodName.endsWith('Role')) {
+    names.push(roleBox(sender));
     const account = args[args.length - 1] || sender;
     validateAddress(account, 'role account');
     names.push(roleBox(account));
   } else if (methodName.startsWith('getBatch')) {
     ['bn', 'bm', 'bc', 'bs', 'bt', 'bu'].forEach((prefix) => names.push(uint64Box(prefix, batchId)));
+  } else {
+    names.push(roleBox(sender));
   }
-  return names;
+
+  return names.slice(0, 8);
 }
 
 async function getAccount(address) {
@@ -230,6 +240,96 @@ function getConfig() {
   };
 }
 
+async function recordTemperatureWithOracle({ batchId, temperatureCenti, observedAt, sensorAddress, evidenceHash }) {
+  const resolvedAppId = requireAppId();
+  const oracleMnemonic = process.env.ALGORAND_ORACLE_MNEMONIC;
+  if (!oracleMnemonic) throw new Error('ALGORAND_ORACLE_MNEMONIC is not configured.');
+
+  const oracleAccount = algosdk.mnemonicToSecretKey(oracleMnemonic);
+  const sender = oracleAccount.addr.toString();
+  const suggestedParams = await algod.getTransactionParams().do();
+  const abiMethod = resolveMethod('recordTemperature');
+
+  const bId = Number(batchId) || 1;
+  const tCenti = Number(temperatureCenti);
+  const obsAt = Number(observedAt) || Math.floor(Date.now() / 1000);
+  const sensor = sensorAddress && algosdk.isValidAddress(sensorAddress) ? sensorAddress : sender;
+
+  let hashBytes;
+  if (typeof evidenceHash === 'string' && /^0x[0-9a-fA-F]{64}$/.test(evidenceHash)) {
+    hashBytes = new Uint8Array(Buffer.from(evidenceHash.slice(2), 'hex'));
+  } else if (evidenceHash instanceof Uint8Array && evidenceHash.length === 32) {
+    hashBytes = evidenceHash;
+  } else {
+    hashBytes = new Uint8Array(32);
+    hashBytes.fill(0xee);
+  }
+
+  const boxNames = await deriveBoxNames('recordTemperature', sender, [bId]);
+  const txn = algosdk.makeApplicationNoOpTxnFromObject({
+    sender,
+    appIndex: resolvedAppId,
+    appArgs: [
+      abiMethod.getSelector(),
+      algosdk.encodeUint64(bId),
+      algosdk.encodeUint64(tCenti),
+      algosdk.encodeUint64(obsAt),
+      algosdk.decodeAddress(sensor).publicKey,
+      hashBytes,
+    ],
+    boxes: boxNames.slice(0, 8).map((name) => ({ appIndex: 0, name })),
+    suggestedParams,
+  });
+
+  const signedTxn = txn.signTxn(oracleAccount.sk);
+  const sent = await algod.sendRawTransaction(signedTxn).do();
+  const txId = sent.txid || sent.txId;
+  const confirmed = await algosdk.waitForConfirmation(algod, txId, 6);
+
+  return {
+    txId,
+    confirmedRound: Number(confirmed['confirmed-round'] || 0),
+    status: 'confirmed',
+    sender,
+    batchId: bId,
+    temperatureCenti: tCenti,
+  };
+}
+
+async function flagBreachWithOracle({ batchId }) {
+  const resolvedAppId = requireAppId();
+  const oracleMnemonic = process.env.ALGORAND_ORACLE_MNEMONIC;
+  if (!oracleMnemonic) throw new Error('ALGORAND_ORACLE_MNEMONIC is not configured.');
+
+  const oracleAccount = algosdk.mnemonicToSecretKey(oracleMnemonic);
+  const sender = oracleAccount.addr.toString();
+  const suggestedParams = await algod.getTransactionParams().do();
+  const abiMethod = resolveMethod('flagBreach');
+  const bId = Number(batchId) || 1;
+
+  const boxNames = await deriveBoxNames('flagBreach', sender, [bId]);
+  const txn = algosdk.makeApplicationNoOpTxnFromObject({
+    sender,
+    appIndex: resolvedAppId,
+    appArgs: [abiMethod.getSelector(), algosdk.encodeUint64(bId)],
+    boxes: boxNames.slice(0, 8).map((name) => ({ appIndex: 0, name })),
+    suggestedParams,
+  });
+
+  const signedTxn = txn.signTxn(oracleAccount.sk);
+  const sent = await algod.sendRawTransaction(signedTxn).do();
+  const txId = sent.txid || sent.txId;
+  const confirmed = await algosdk.waitForConfirmation(algod, txId, 6);
+
+  return {
+    txId,
+    confirmedRound: Number(confirmed['confirmed-round'] || 0),
+    status: 'confirmed',
+    sender,
+    batchId: bId,
+  };
+}
+
 module.exports = {
   getConfig,
   getAccount,
@@ -237,4 +337,6 @@ module.exports = {
   submitSignedTransaction,
   waitForConfirmation,
   lookupTransaction,
+  recordTemperatureWithOracle,
+  flagBreachWithOracle,
 };

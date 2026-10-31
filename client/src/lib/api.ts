@@ -82,6 +82,15 @@ export const algorandAPI = {
   }) => api.post('/algorand/batches/record', data),
   syncBatch: (data: { batchId: string; txId: string; confirmedRound?: number; state?: BatchState }) =>
     api.post('/algorand/batches/sync', data),
+  oracleRecordTemperature: (data: {
+    batchId: number | string;
+    temperatureCenti: number;
+    observedAt?: number;
+    sensorAddress?: string;
+    evidenceHash?: string;
+  }) => api.post('/algorand/oracle/record-temperature', data),
+  oracleFlagBreach: (data: { batchId: number | string }) =>
+    api.post('/algorand/oracle/flag-breach', data),
 };
 
 export default api;

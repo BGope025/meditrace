@@ -12,5 +12,7 @@ router.get('/transactions/:txId/confirm', controller.confirm);
 router.get('/transactions/:txId', controller.lookup);
 router.post('/batches/record', controller.recordBatchTransaction);
 router.post('/batches/sync', controller.syncBatchTransaction);
+router.post('/oracle/record-temperature', controller.recordTemperatureWithOracle);
+router.post('/oracle/flag-breach', controller.flagBreachWithOracle);
 
 module.exports = router;

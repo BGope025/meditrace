@@ -165,30 +165,39 @@ export default function Dashboard() {
   async function handleBreach() {
     if (!selected || selected.state === 1) return;
     try {
-      const account = wallet || (await connectAlgorandWallet());
-      if (!account) throw new Error('Connect Pera Wallet before reporting an excursion.');
-      if (!wallet) setWallet(account);
       const numericBatchId = Number.parseInt(String(selected.batch_id).replace(/\D/g, ''), 10) || 1;
-      const transaction = await signAndSubmitAlgorandAppCall({
-        sender: account,
-        method: 'flagBreach',
-        args: [numericBatchId],
-      });
+      let txId: string;
+      let confirmedRound: number;
+
+      if (wallet) {
+        const transaction = await signAndSubmitAlgorandAppCall({
+          sender: wallet,
+          method: 'flagBreach',
+          args: [numericBatchId],
+        });
+        txId = transaction.txId;
+        confirmedRound = transaction.confirmedRound;
+      } else {
+        const res = await algorandAPI.oracleFlagBreach({ batchId: numericBatchId });
+        txId = res.data.transaction.txId;
+        confirmedRound = res.data.transaction.confirmedRound;
+      }
+
       await algorandAPI.syncBatch({
         batchId: selected.batch_id,
-        txId: transaction.txId,
-        confirmedRound: transaction.confirmedRound,
+        txId,
+        confirmedRound,
         state: 1,
       });
       setNotice({
-        message: `Temperature excursion anchored on Algorand in round ${transaction.confirmedRound}.`,
+        message: `Temperature excursion anchored on Algorand in round ${confirmedRound}. Tx: ${txId}`,
         type: 'error',
       });
       setSelected({ ...selected, state: 1 });
       await loadBatches();
     } catch (e: any) {
       setNotice({
-        message: e?.response?.data?.error || 'Could not flag excursion.',
+        message: e?.response?.data?.error || e?.message || 'Could not flag excursion.',
         type: 'error',
       });
     }

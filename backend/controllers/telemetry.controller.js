@@ -1,6 +1,7 @@
 const { query } = require('../config/db');
 const { batchRegistryContract } = require('../config/web3');
 const { keccak256, toUtf8Bytes } = require('ethers');
+const algorandService = require('../services/algorand.service');
 
 const SAFE_MIN_TEMP = 2;
 const SAFE_MAX_TEMP = 8;
@@ -40,6 +41,35 @@ async function flagBreachIfNeeded(batchId, temperature, payload, sensorAddress) 
     } catch (blockchainError) {
       // The database remains the source for the API read model if the chain is unavailable.
       console.warn('Smart contract breach warning:', blockchainError.message);
+    }
+  }
+
+  // Anchor breach on Algorand TestNet if configured
+  if (process.env.ALGORAND_APP_ID && process.env.ALGORAND_ORACLE_MNEMONIC) {
+    try {
+      const evidenceHash = keccak256(toUtf8Bytes(JSON.stringify(payload)));
+      const observedAt = Math.floor(new Date(payload.timestamp).getTime() / 1000);
+      const temperatureCenti = Math.round(temperature * 100);
+      const algoResult = await algorandService.recordTemperatureWithOracle({
+        batchId: numericBatchId(batchId),
+        temperatureCenti,
+        observedAt,
+        sensorAddress,
+        evidenceHash,
+      });
+      console.log(`Algorand on-chain breach recorded: Tx ${algoResult.txId} in round ${algoResult.confirmedRound}`);
+      await query(
+        `UPDATE batches SET 
+          state = 1, 
+          updated_at = NOW(), 
+          chain = 'algorand', 
+          algorand_tx_id = $1, 
+          algorand_confirmed_round = $2 
+         WHERE batch_id = $3`,
+        [algoResult.txId, algoResult.confirmedRound, batchId]
+      );
+    } catch (algoError) {
+      console.warn('Algorand smart contract breach warning:', algoError.message);
     }
   }
 

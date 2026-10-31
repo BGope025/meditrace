@@ -109,4 +109,42 @@ async function syncBatchTransaction(req, res) {
   }
 }
 
-module.exports = { config, account, prepareAppCall, submit, confirm, submitAndConfirm, lookup, recordBatchTransaction, syncBatchTransaction };
+async function recordTemperatureWithOracle(req, res) {
+  try {
+    const { batchId, temperatureCenti, observedAt, sensorAddress, evidenceHash } = req.body || {};
+    const result = await algorandService.recordTemperatureWithOracle({
+      batchId,
+      temperatureCenti,
+      observedAt,
+      sensorAddress,
+      evidenceHash,
+    });
+    return res.json({ success: true, transaction: result });
+  } catch (error) {
+    return sendError(res, error);
+  }
+}
+
+async function flagBreachWithOracle(req, res) {
+  try {
+    const { batchId } = req.body || {};
+    const result = await algorandService.flagBreachWithOracle({ batchId });
+    return res.json({ success: true, transaction: result });
+  } catch (error) {
+    return sendError(res, error);
+  }
+}
+
+module.exports = {
+  config,
+  account,
+  prepareAppCall,
+  submit,
+  confirm,
+  submitAndConfirm,
+  lookup,
+  recordBatchTransaction,
+  syncBatchTransaction,
+  recordTemperatureWithOracle,
+  flagBreachWithOracle,
+};
