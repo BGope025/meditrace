@@ -1,0 +1,13 @@
+## role based .. temperature
+## medicine batch qr -> hash
+
+contract .. fault .. hash -> rpc call.
+
+pharmacy & customer transaparency 
+
+db {
+    medicine-hash;
+}
+block explorer
+
+ remix ide 

@@ -1,0 +1,340 @@
+{
+  "name": "BatchRegistry",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "desc": "Called once at app creation. Deployer becomes admin.",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantRole",
+      "desc": "Grant a role bitmask to an account. Admin-only.",
+      "args": [
+        {
+          "name": "role",
+          "type": "uint64"
+        },
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokeRole",
+      "desc": "Revoke a role bitmask from an account. Admin-only.",
+      "args": [
+        {
+          "name": "role",
+          "type": "uint64"
+        },
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantManufacturerRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantDistributorRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantPharmacyRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantTelemetryOracleRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokeManufacturerRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokeDistributorRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokePharmacyRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokeTelemetryOracleRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "hasRole",
+      "desc": "Check whether an account holds a specific role.",
+      "args": [
+        {
+          "name": "role",
+          "type": "uint64"
+        },
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "bool"
+      }
+    },
+    {
+      "name": "createBatch",
+      "desc": "Create a new medicine batch. Only manufacturers or admins.",
+      "args": [
+        {
+          "name": "drugName",
+          "type": "string",
+          "desc": "Name of the drug (max 256 bytes)."
+        }
+      ],
+      "returns": {
+        "type": "uint64",
+        "desc": "batchId - The assigned batch ID."
+      }
+    },
+    {
+      "name": "flagBreach",
+      "desc": "Legacy/manual breach method retained for backend compatibility.\nOnly admin, manufacturer, or oracle can flag a breach.",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "recordTemperature",
+      "desc": "Records a signed sensor reading digest on-chain and auto-breaches\nif the temperature is outside the safe range [2.00 °C, 8.00 °C].\n\n\nTemperature is in hundredths of a degree (e.g. 450 = 4.50 °C).\nFor the AVM, we pass temperature as uint64; values above a threshold\n(e.g.  SAFE_MAX) are treated as out of range. Negative temperatures\nshould be encoded as very large uint64 values and will always breach.",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64",
+          "desc": "The batch to record against."
+        },
+        {
+          "name": "temperatureCenti",
+          "type": "uint64",
+          "desc": "Temp in 1/100 °C (uint64 encoding)."
+        },
+        {
+          "name": "observedAt",
+          "type": "uint64",
+          "desc": "Sensor observation timestamp (unix seconds)."
+        },
+        {
+          "name": "sensor",
+          "type": "address",
+          "desc": "Sensor account address."
+        },
+        {
+          "name": "evidenceHash",
+          "type": "byte[32]",
+          "desc": "keccak256 of the signed telemetry payload."
+        }
+      ],
+      "returns": {
+        "type": "bool",
+        "desc": "isSafe - Whether the reading is within the safe range."
+      }
+    },
+    {
+      "name": "transferBatch",
+      "desc": "Transfer batch custody to a new custodian.\nAllowed for: current custodian, admin, manufacturer, distributor, pharmacy.",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        },
+        {
+          "name": "newCustodian",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "confirmDelivery",
+      "desc": "Pharmacy confirms final delivery of a batch.\nOnly a pharmacy-role holder who is the current custodian (or admin).",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "getBatch",
+      "desc": "Get core batch info (drug name, manufacturer, state, created timestamp).",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "(byte[],address,uint64,uint64)"
+      }
+    },
+    {
+      "name": "getBatchDetails",
+      "desc": "Get full batch details.",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "(byte[],address,address,uint64,uint64,uint64)"
+      }
+    },
+    {
+      "name": "getCustodyRecord",
+      "desc": "Get a single custody record by batch ID and index.",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        },
+        {
+          "name": "index",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "(address,address,address,uint64)"
+      }
+    },
+    {
+      "name": "getBreachRecord",
+      "desc": "Get a single breach record by batch ID and index.",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        },
+        {
+          "name": "index",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "(uint64,uint64,uint64,address,byte[32])"
+      }
+    },
+    {
+      "name": "getCustodyCount",
+      "desc": "Get the number of custody transfers for a batch.",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      }
+    },
+    {
+      "name": "getBreachCount",
+      "desc": "Get the number of breach records for a batch.",
+      "args": [
+        {
+          "name": "batchId",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      }
+    }
+  ]
+}

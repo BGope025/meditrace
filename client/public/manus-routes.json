@@ -1,0 +1,1 @@
+{"routes":[{"path":"/","title":"MediTrace"},{"path":"/dashboard","title":"Command center"},{"path":"/explorer","title":"Chain explorer"},{"path":"/verify","title":"Public verification"},{"path":"/verify/:batchId","title":"Batch certificate"}]}

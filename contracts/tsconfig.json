@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "experimentalDecorators": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "types": ["vitest/globals", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@algorandfoundation/tealscript": ["contracts/tealscript.d.ts"]
+    }
+  },
+  "include": [
+    "contracts/**/*.ts",
+    "scripts/**/*.ts",
+    "test/**/*.ts",
+    "../node_modules/@algorandfoundation/tealscript/types/global.d.ts"
+  ],
+  "exclude": ["node_modules", "../node_modules", "**/node_modules/**", "artifacts", "dist"]
+}

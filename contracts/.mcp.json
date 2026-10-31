@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "kapa": {
+      "type": "http",
+      "url": "https://algorand-docs.mcp.kapa.ai/"
+    },
+    "vibekit": {
+      "command": "C:\\Users\\Gope\\.vibekit\\bin\\vibekit.exe",
+      "args": [
+        "mcp"
+      ],
+      "env": {
+        "NETWORK": "localnet",
+        "NETWORKS": "localnet,testnet,mainnet",
+        "SIGNING": "execute"
+      }
+    }
+  }
+}

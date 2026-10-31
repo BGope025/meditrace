@@ -1,0 +1,189 @@
+{
+  "name": "AccessManager",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "desc": "Called once on app creation. Sets the creator as admin.",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantRole",
+      "desc": "Grant a role (by bit) to an account. Admin-only.",
+      "args": [
+        {
+          "name": "role",
+          "type": "uint64",
+          "desc": "The role bit to grant (1, 2, 4, 8, or 16)."
+        },
+        {
+          "name": "account",
+          "type": "address",
+          "desc": "The target account address."
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokeRole",
+      "desc": "Revoke a role (by bit) from an account. Admin-only.",
+      "args": [
+        {
+          "name": "role",
+          "type": "uint64",
+          "desc": "The role bit to revoke."
+        },
+        {
+          "name": "account",
+          "type": "address",
+          "desc": "The target account address."
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantManufacturerRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantDistributorRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantPharmacyRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "grantTelemetryOracleRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokeManufacturerRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokeDistributorRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokePharmacyRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "revokeTelemetryOracleRole",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "hasRole",
+      "desc": "Check whether an account holds a specific role.",
+      "args": [
+        {
+          "name": "role",
+          "type": "uint64",
+          "desc": "The role bit to check."
+        },
+        {
+          "name": "account",
+          "type": "address",
+          "desc": "The account address."
+        }
+      ],
+      "returns": {
+        "type": "bool",
+        "desc": "true if the account holds the role."
+      }
+    },
+    {
+      "name": "getRoleMask",
+      "desc": "Returns the full role bitmask for an account.",
+      "args": [
+        {
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      }
+    },
+    {
+      "name": "getAdmin",
+      "desc": "Returns the admin address.",
+      "args": [],
+      "returns": {
+        "type": "address"
+      }
+    }
+  ]
+}

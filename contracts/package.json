@@ -1,0 +1,30 @@
+{
+  "name": "meditrace-contracts",
+  "version": "2.0.0",
+  "description": "MediTrace supply chain smart contracts for Algorand (TEALScript)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tealscript --skip-algod contracts/BatchRegistry.ts artifacts",
+    "build:access": "tealscript --skip-algod contracts/AccessManager.ts artifacts",
+    "build:all": "npm run build:access && npm run build",
+    "generate:account": "tsx scripts/generateAccount.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "deploy:testnet": "tsx scripts/deploy.ts",
+    "deploy:localnet": "NETWORK=localnet tsx scripts/deploy.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@algorandfoundation/algokit-utils": "^8.0.0",
+    "@algorandfoundation/tealscript": "^0.106.0",
+    "algosdk": "^3.2.0",
+    "dotenv": "^16.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}

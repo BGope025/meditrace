@@ -1,0 +1,23 @@
+{
+  "name": "meditrace-monorepo",
+  "version": "1.0.0",
+  "description": "MediTrace blockchain-based supply chain tracking system",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "backend",
+    "simulator",
+    "client"
+  ],
+  "scripts": {
+    "install-all": "npm install --workspaces",
+    "build-all": "npm run build --workspaces",
+    "test-all": "npm test --workspaces",
+    "dev": "concurrently -k \"npm:dev:*\"",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:client": "npm run dev --workspace=client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

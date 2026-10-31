@@ -1,0 +1,1512 @@
+[
+  {
+    "teal": 1,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 2,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 3,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 15,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 16,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 17,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 18,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 19,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 20,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 21,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 25,
+    "source": "contracts\\AccessManager.ts:20",
+    "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?"
+  },
+  {
+    "teal": 30,
+    "source": "contracts\\AccessManager.ts:41"
+  },
+  {
+    "teal": 31,
+    "source": "contracts\\AccessManager.ts:41"
+  },
+  {
+    "teal": 32,
+    "source": "contracts\\AccessManager.ts:41"
+  },
+  {
+    "teal": 38,
+    "source": "contracts\\AccessManager.ts:41"
+  },
+  {
+    "teal": 42,
+    "source": "contracts\\AccessManager.ts:42"
+  },
+  {
+    "teal": 43,
+    "source": "contracts\\AccessManager.ts:42"
+  },
+  {
+    "teal": 44,
+    "source": "contracts\\AccessManager.ts:42"
+  },
+  {
+    "teal": 48,
+    "source": "contracts\\AccessManager.ts:43"
+  },
+  {
+    "teal": 49,
+    "source": "contracts\\AccessManager.ts:43"
+  },
+  {
+    "teal": 50,
+    "source": "contracts\\AccessManager.ts:43"
+  },
+  {
+    "teal": 54,
+    "source": "contracts\\AccessManager.ts:44"
+  },
+  {
+    "teal": 55,
+    "source": "contracts\\AccessManager.ts:44"
+  },
+  {
+    "teal": 56,
+    "source": "contracts\\AccessManager.ts:44"
+  },
+  {
+    "teal": 60,
+    "source": "contracts\\AccessManager.ts:45"
+  },
+  {
+    "teal": 61,
+    "source": "contracts\\AccessManager.ts:45"
+  },
+  {
+    "teal": 62,
+    "source": "contracts\\AccessManager.ts:45"
+  },
+  {
+    "teal": 66,
+    "source": "contracts\\AccessManager.ts:46"
+  },
+  {
+    "teal": 67,
+    "source": "contracts\\AccessManager.ts:46"
+  },
+  {
+    "teal": 68,
+    "source": "contracts\\AccessManager.ts:46"
+  },
+  {
+    "teal": 72,
+    "source": "contracts\\AccessManager.ts:47"
+  },
+  {
+    "teal": 73,
+    "source": "contracts\\AccessManager.ts:47"
+  },
+  {
+    "teal": 74,
+    "source": "contracts\\AccessManager.ts:47"
+  },
+  {
+    "teal": 75,
+    "source": "contracts\\AccessManager.ts:41"
+  },
+  {
+    "teal": 81,
+    "source": "contracts\\AccessManager.ts:53"
+  },
+  {
+    "teal": 90,
+    "source": "contracts\\AccessManager.ts:55"
+  },
+  {
+    "teal": 91,
+    "source": "contracts\\AccessManager.ts:55"
+  },
+  {
+    "teal": 92,
+    "source": "contracts\\AccessManager.ts:55"
+  },
+  {
+    "teal": 93,
+    "source": "contracts\\AccessManager.ts:55"
+  },
+  {
+    "teal": 94,
+    "source": "contracts\\AccessManager.ts:55"
+  },
+  {
+    "teal": 95,
+    "source": "contracts\\AccessManager.ts:55"
+  },
+  {
+    "teal": 96,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 97,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 98,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 99,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 100,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 101,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 102,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 103,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 104,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 105,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 106,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 107,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 110,
+    "source": "contracts\\AccessManager.ts:57",
+    "errorMessage": "box value does not exist: this.roles(this.txn.sender).value"
+  },
+  {
+    "teal": 111,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 112,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 113,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 114,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 115,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 116,
+    "source": "contracts\\AccessManager.ts:57"
+  },
+  {
+    "teal": 117,
+    "source": "contracts\\AccessManager.ts:56"
+  },
+  {
+    "teal": 120,
+    "source": "contracts\\AccessManager.ts:55"
+  },
+  {
+    "teal": 124,
+    "source": "contracts\\AccessManager.ts:54",
+    "errorMessage": "Caller is not an admin"
+  },
+  {
+    "teal": 125,
+    "source": "contracts\\AccessManager.ts:53"
+  },
+  {
+    "teal": 131,
+    "source": "contracts\\AccessManager.ts:63"
+  },
+  {
+    "teal": 136,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 137,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 138,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 139,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 140,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 141,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 142,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 143,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 148,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 149,
+    "source": "contracts\\AccessManager.ts:64"
+  },
+  {
+    "teal": 154,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 155,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 156,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 157,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 160,
+    "source": "contracts\\AccessManager.ts:65",
+    "errorMessage": "box value does not exist: this.roles(account).value"
+  },
+  {
+    "teal": 161,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 162,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 163,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 164,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 165,
+    "source": "contracts\\AccessManager.ts:65"
+  },
+  {
+    "teal": 166,
+    "source": "contracts\\AccessManager.ts:63"
+  },
+  {
+    "teal": 171,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 172,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 173,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 174,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 175,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 178,
+    "source": "contracts\\AccessManager.ts:76",
+    "errorMessage": "argument 0 (account) for grantRole must be a address"
+  },
+  {
+    "teal": 181,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 182,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 185,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 186,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 187,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 196,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 199,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 203,
+    "source": "contracts\\AccessManager.ts:77"
+  },
+  {
+    "teal": 207,
+    "source": "contracts\\AccessManager.ts:78"
+  },
+  {
+    "teal": 208,
+    "source": "contracts\\AccessManager.ts:78"
+  },
+  {
+    "teal": 209,
+    "source": "contracts\\AccessManager.ts:78"
+  },
+  {
+    "teal": 212,
+    "source": "contracts\\AccessManager.ts:78",
+    "errorMessage": "Cannot grant role to zero address"
+  },
+  {
+    "teal": 216,
+    "source": "contracts\\AccessManager.ts:80"
+  },
+  {
+    "teal": 217,
+    "source": "contracts\\AccessManager.ts:80"
+  },
+  {
+    "teal": 222,
+    "source": "contracts\\AccessManager.ts:81"
+  },
+  {
+    "teal": 223,
+    "source": "contracts\\AccessManager.ts:81"
+  },
+  {
+    "teal": 224,
+    "source": "contracts\\AccessManager.ts:81"
+  },
+  {
+    "teal": 225,
+    "source": "contracts\\AccessManager.ts:81"
+  },
+  {
+    "teal": 226,
+    "source": "contracts\\AccessManager.ts:81"
+  },
+  {
+    "teal": 227,
+    "source": "contracts\\AccessManager.ts:81"
+  },
+  {
+    "teal": 228,
+    "source": "contracts\\AccessManager.ts:81"
+  },
+  {
+    "teal": 233,
+    "source": "contracts\\AccessManager.ts:82"
+  },
+  {
+    "teal": 234,
+    "source": "contracts\\AccessManager.ts:82"
+  },
+  {
+    "teal": 235,
+    "source": "contracts\\AccessManager.ts:82"
+  },
+  {
+    "teal": 236,
+    "source": "contracts\\AccessManager.ts:82"
+  },
+  {
+    "teal": 239,
+    "source": "contracts\\AccessManager.ts:82",
+    "errorMessage": "box value does not exist: this.roles(account).value"
+  },
+  {
+    "teal": 240,
+    "source": "contracts\\AccessManager.ts:82"
+  },
+  {
+    "teal": 241,
+    "source": "contracts\\AccessManager.ts:82"
+  },
+  {
+    "teal": 246,
+    "source": "contracts\\AccessManager.ts:84"
+  },
+  {
+    "teal": 247,
+    "source": "contracts\\AccessManager.ts:84"
+  },
+  {
+    "teal": 248,
+    "source": "contracts\\AccessManager.ts:84"
+  },
+  {
+    "teal": 249,
+    "source": "contracts\\AccessManager.ts:84"
+  },
+  {
+    "teal": 250,
+    "source": "contracts\\AccessManager.ts:84"
+  },
+  {
+    "teal": 251,
+    "source": "contracts\\AccessManager.ts:84"
+  },
+  {
+    "teal": 252,
+    "source": "contracts\\AccessManager.ts:84"
+  },
+  {
+    "teal": 253,
+    "source": "contracts\\AccessManager.ts:84"
+  },
+  {
+    "teal": 257,
+    "source": "contracts\\AccessManager.ts:86"
+  },
+  {
+    "teal": 258,
+    "source": "contracts\\AccessManager.ts:86"
+  },
+  {
+    "teal": 259,
+    "source": "contracts\\AccessManager.ts:76"
+  },
+  {
+    "teal": 264,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 265,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 266,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 267,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 268,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 271,
+    "source": "contracts\\AccessManager.ts:95",
+    "errorMessage": "argument 0 (account) for revokeRole must be a address"
+  },
+  {
+    "teal": 274,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 275,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 278,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 279,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 280,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 289,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 293,
+    "source": "contracts\\AccessManager.ts:96"
+  },
+  {
+    "teal": 298,
+    "source": "contracts\\AccessManager.ts:98"
+  },
+  {
+    "teal": 299,
+    "source": "contracts\\AccessManager.ts:98"
+  },
+  {
+    "teal": 300,
+    "source": "contracts\\AccessManager.ts:98"
+  },
+  {
+    "teal": 301,
+    "source": "contracts\\AccessManager.ts:98"
+  },
+  {
+    "teal": 302,
+    "source": "contracts\\AccessManager.ts:98"
+  },
+  {
+    "teal": 303,
+    "source": "contracts\\AccessManager.ts:98"
+  },
+  {
+    "teal": 304,
+    "source": "contracts\\AccessManager.ts:98"
+  },
+  {
+    "teal": 309,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 310,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 311,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 312,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 313,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 314,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 315,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 318,
+    "source": "contracts\\AccessManager.ts:99",
+    "errorMessage": "box value does not exist: this.roles(account).value"
+  },
+  {
+    "teal": 319,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 320,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 321,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 322,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 323,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 324,
+    "source": "contracts\\AccessManager.ts:99"
+  },
+  {
+    "teal": 329,
+    "source": "contracts\\AccessManager.ts:102"
+  },
+  {
+    "teal": 330,
+    "source": "contracts\\AccessManager.ts:102"
+  },
+  {
+    "teal": 331,
+    "source": "contracts\\AccessManager.ts:95"
+  },
+  {
+    "teal": 336,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 337,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 338,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 339,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 340,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 343,
+    "source": "contracts\\AccessManager.ts:107",
+    "errorMessage": "argument 0 (account) for grantManufacturerRole must be a address"
+  },
+  {
+    "teal": 346,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 347,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 348,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 352,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 356,
+    "source": "contracts\\AccessManager.ts:108"
+  },
+  {
+    "teal": 357,
+    "source": "contracts\\AccessManager.ts:108"
+  },
+  {
+    "teal": 358,
+    "source": "contracts\\AccessManager.ts:108"
+  },
+  {
+    "teal": 359,
+    "source": "contracts\\AccessManager.ts:108"
+  },
+  {
+    "teal": 360,
+    "source": "contracts\\AccessManager.ts:107"
+  },
+  {
+    "teal": 365,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 366,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 367,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 368,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 369,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 372,
+    "source": "contracts\\AccessManager.ts:111",
+    "errorMessage": "argument 0 (account) for grantDistributorRole must be a address"
+  },
+  {
+    "teal": 375,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 376,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 377,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 381,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 385,
+    "source": "contracts\\AccessManager.ts:112"
+  },
+  {
+    "teal": 386,
+    "source": "contracts\\AccessManager.ts:112"
+  },
+  {
+    "teal": 387,
+    "source": "contracts\\AccessManager.ts:112"
+  },
+  {
+    "teal": 388,
+    "source": "contracts\\AccessManager.ts:112"
+  },
+  {
+    "teal": 389,
+    "source": "contracts\\AccessManager.ts:111"
+  },
+  {
+    "teal": 394,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 395,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 396,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 397,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 398,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 401,
+    "source": "contracts\\AccessManager.ts:115",
+    "errorMessage": "argument 0 (account) for grantPharmacyRole must be a address"
+  },
+  {
+    "teal": 404,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 405,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 406,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 410,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 414,
+    "source": "contracts\\AccessManager.ts:116"
+  },
+  {
+    "teal": 415,
+    "source": "contracts\\AccessManager.ts:116"
+  },
+  {
+    "teal": 416,
+    "source": "contracts\\AccessManager.ts:116"
+  },
+  {
+    "teal": 417,
+    "source": "contracts\\AccessManager.ts:116"
+  },
+  {
+    "teal": 418,
+    "source": "contracts\\AccessManager.ts:115"
+  },
+  {
+    "teal": 423,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 424,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 425,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 426,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 427,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 430,
+    "source": "contracts\\AccessManager.ts:119",
+    "errorMessage": "argument 0 (account) for grantTelemetryOracleRole must be a address"
+  },
+  {
+    "teal": 433,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 434,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 435,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 439,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 443,
+    "source": "contracts\\AccessManager.ts:120"
+  },
+  {
+    "teal": 444,
+    "source": "contracts\\AccessManager.ts:120"
+  },
+  {
+    "teal": 445,
+    "source": "contracts\\AccessManager.ts:120"
+  },
+  {
+    "teal": 446,
+    "source": "contracts\\AccessManager.ts:120"
+  },
+  {
+    "teal": 447,
+    "source": "contracts\\AccessManager.ts:119"
+  },
+  {
+    "teal": 452,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 453,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 454,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 455,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 456,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 459,
+    "source": "contracts\\AccessManager.ts:125",
+    "errorMessage": "argument 0 (account) for revokeManufacturerRole must be a address"
+  },
+  {
+    "teal": 462,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 463,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 464,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 468,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 472,
+    "source": "contracts\\AccessManager.ts:126"
+  },
+  {
+    "teal": 473,
+    "source": "contracts\\AccessManager.ts:126"
+  },
+  {
+    "teal": 474,
+    "source": "contracts\\AccessManager.ts:126"
+  },
+  {
+    "teal": 475,
+    "source": "contracts\\AccessManager.ts:126"
+  },
+  {
+    "teal": 476,
+    "source": "contracts\\AccessManager.ts:125"
+  },
+  {
+    "teal": 481,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 482,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 483,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 484,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 485,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 488,
+    "source": "contracts\\AccessManager.ts:129",
+    "errorMessage": "argument 0 (account) for revokeDistributorRole must be a address"
+  },
+  {
+    "teal": 491,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 492,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 493,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 497,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 501,
+    "source": "contracts\\AccessManager.ts:130"
+  },
+  {
+    "teal": 502,
+    "source": "contracts\\AccessManager.ts:130"
+  },
+  {
+    "teal": 503,
+    "source": "contracts\\AccessManager.ts:130"
+  },
+  {
+    "teal": 504,
+    "source": "contracts\\AccessManager.ts:130"
+  },
+  {
+    "teal": 505,
+    "source": "contracts\\AccessManager.ts:129"
+  },
+  {
+    "teal": 510,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 511,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 512,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 513,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 514,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 517,
+    "source": "contracts\\AccessManager.ts:133",
+    "errorMessage": "argument 0 (account) for revokePharmacyRole must be a address"
+  },
+  {
+    "teal": 520,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 521,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 522,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 526,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 530,
+    "source": "contracts\\AccessManager.ts:134"
+  },
+  {
+    "teal": 531,
+    "source": "contracts\\AccessManager.ts:134"
+  },
+  {
+    "teal": 532,
+    "source": "contracts\\AccessManager.ts:134"
+  },
+  {
+    "teal": 533,
+    "source": "contracts\\AccessManager.ts:134"
+  },
+  {
+    "teal": 534,
+    "source": "contracts\\AccessManager.ts:133"
+  },
+  {
+    "teal": 539,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 540,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 541,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 542,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 543,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 546,
+    "source": "contracts\\AccessManager.ts:137",
+    "errorMessage": "argument 0 (account) for revokeTelemetryOracleRole must be a address"
+  },
+  {
+    "teal": 549,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 550,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 551,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 555,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 559,
+    "source": "contracts\\AccessManager.ts:138"
+  },
+  {
+    "teal": 560,
+    "source": "contracts\\AccessManager.ts:138"
+  },
+  {
+    "teal": 561,
+    "source": "contracts\\AccessManager.ts:138"
+  },
+  {
+    "teal": 562,
+    "source": "contracts\\AccessManager.ts:138"
+  },
+  {
+    "teal": 563,
+    "source": "contracts\\AccessManager.ts:137"
+  },
+  {
+    "teal": 568,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 571,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 572,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 573,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 574,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 575,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 578,
+    "source": "contracts\\AccessManager.ts:150",
+    "errorMessage": "argument 0 (account) for hasRole must be a address"
+  },
+  {
+    "teal": 581,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 582,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 585,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 586,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 587,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 588,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 589,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 590,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 591,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 592,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 593,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 603,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 607,
+    "source": "contracts\\AccessManager.ts:151"
+  },
+  {
+    "teal": 608,
+    "source": "contracts\\AccessManager.ts:151"
+  },
+  {
+    "teal": 609,
+    "source": "contracts\\AccessManager.ts:151"
+  },
+  {
+    "teal": 610,
+    "source": "contracts\\AccessManager.ts:150"
+  },
+  {
+    "teal": 615,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 618,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 619,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 620,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 621,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 622,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 625,
+    "source": "contracts\\AccessManager.ts:157",
+    "errorMessage": "argument 0 (account) for getRoleMask must be a address"
+  },
+  {
+    "teal": 628,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 629,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 630,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 631,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 632,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 633,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 639,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 644,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 645,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 646,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 647,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 648,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 649,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 650,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 651,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 656,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 657,
+    "source": "contracts\\AccessManager.ts:158"
+  },
+  {
+    "teal": 662,
+    "source": "contracts\\AccessManager.ts:159"
+  },
+  {
+    "teal": 663,
+    "source": "contracts\\AccessManager.ts:159"
+  },
+  {
+    "teal": 664,
+    "source": "contracts\\AccessManager.ts:159"
+  },
+  {
+    "teal": 665,
+    "source": "contracts\\AccessManager.ts:159"
+  },
+  {
+    "teal": 668,
+    "source": "contracts\\AccessManager.ts:159",
+    "errorMessage": "box value does not exist: this.roles(account).value"
+  },
+  {
+    "teal": 669,
+    "source": "contracts\\AccessManager.ts:159"
+  },
+  {
+    "teal": 670,
+    "source": "contracts\\AccessManager.ts:157"
+  },
+  {
+    "teal": 675,
+    "source": "contracts\\AccessManager.ts:165"
+  },
+  {
+    "teal": 678,
+    "source": "contracts\\AccessManager.ts:165"
+  },
+  {
+    "teal": 679,
+    "source": "contracts\\AccessManager.ts:165"
+  },
+  {
+    "teal": 680,
+    "source": "contracts\\AccessManager.ts:165"
+  },
+  {
+    "teal": 681,
+    "source": "contracts\\AccessManager.ts:165"
+  },
+  {
+    "teal": 682,
+    "source": "contracts\\AccessManager.ts:165"
+  },
+  {
+    "teal": 688,
+    "source": "contracts\\AccessManager.ts:165"
+  },
+  {
+    "teal": 692,
+    "source": "contracts\\AccessManager.ts:166"
+  },
+  {
+    "teal": 693,
+    "source": "contracts\\AccessManager.ts:166"
+  },
+  {
+    "teal": 694,
+    "source": "contracts\\AccessManager.ts:165"
+  },
+  {
+    "teal": 697,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 698,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 699,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 702,
+    "source": "contracts\\AccessManager.ts:20",
+    "errorMessage": "this contract does not implement the given ABI method for create NoOp"
+  },
+  {
+    "teal": 705,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 706,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 707,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 708,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 709,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 710,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 711,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 712,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 713,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 714,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 715,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 716,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 717,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 718,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 719,
+    "source": "contracts\\AccessManager.ts:20"
+  },
+  {
+    "teal": 722,
+    "source": "contracts\\AccessManager.ts:20",
+    "errorMessage": "this contract does not implement the given ABI method for call NoOp"
+  }
+]
